@@ -214,7 +214,6 @@ deps_config := \
 	drivers/video/backlight/Kconfig \
 	drivers/video/omap/Kconfig \
 	drivers/video/geode/Kconfig \
-	drivers/gpu/vivante/Kconfig \
 	drivers/gpu/drm/Kconfig \
 	drivers/char/agp/Kconfig \
 	drivers/video/Kconfig \

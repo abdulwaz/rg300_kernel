@@ -383,8 +383,8 @@ struct jz4760lcd_info jz4760_lcd_panel = {
 		 .alpha = 0xa0, /* alpha value */
 		 .ipu_restart = 0x80001000, /* ipu restart */
 		 .fg_change = FG_CHANGE_ALL, /* change all initially */
-		 .fg0 = {16, 0, 0, 320,480}, /* bpp, x, y, w, h */
-		 .fg1 = {16, 0, 0, 320,480}, /* bpp, x, y, w, h */
+		 .fg0 = {16, 0, 0, 960,480}, /* bpp, x, y, w, h */
+		 .fg1 = {16, 0, 0, 960,480}, /* bpp, x, y, w, h */
 	 },
  
 #elif defined(CONFIG_JZ4760_LCD_RS97_V21)
@@ -397,7 +397,7 @@ struct jz4760lcd_info jz4760_lcd_panel = {
 		.slcd_cfg = 0,
 		.ctrl = LCD_CTRL_OFUM | LCD_CTRL_BST_16, /* 16words burst, enable out FIFO underrun irq */
 	/*  dw, dh, fclk, hsw, vsw, elw, blw, efw, bfw */
-		320, 480, 60, 20, 1, 32, 40, 17, 27, //INNOLUX
+		480, 320, 60, 20, 1, 32, 40, 17, 27, //INNOLUX THISONE
 
 },
 
@@ -408,14 +408,14 @@ struct jz4760lcd_info jz4760_lcd_panel = {
 				   //LCD_OSDC_F0EN, /* enable Foreground0 */
 		.osd_ctrl = LCD_OSDCTRL_IPU | LCD_OSDCTRL_OSDBPP_15_16,			  /* disable ipu,  */
 		.rgb_ctrl = LCD_RGBC_EVEN_GBR << LCD_RGBC_EVENRGB_BIT,
-		.bgcolor = 0x000000,		 /* set background color Black */
+		.bgcolor = 0x9CFC10,		 /* set background color Black */
 		.colorkey0 = 0x80000000,	 /* disable colorkey */
 		.colorkey1 = 0x80000000,	 /* disable colorkey */
 		.alpha = 0xa0,				 /* alpha value */
 		.ipu_restart = 0x80001000,   /* ipu restart */
 		.fg_change = FG_CHANGE_ALL,  /* change all initially */
-		.fg0 = {16, 0, 0, 320, 480}, /* bpp, x, y, w, h */
-		.fg1 = {16, 0, 0, 320, 480}, /* bpp, x, y, w, h */
+		.fg0 = {16, 0, 0, 480, 320}, /* bpp, x, y, w, h */
+		.fg1 = {16, 0, 0, 480, 320}, /* bpp, x, y, w, h */
 	},
 
 #elif defined(CONFIG_JZ4760_LCD_RS97_V30)
